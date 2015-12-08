@@ -1,0 +1,22 @@
+{
+  "name": "assemble-modals",
+  "version": "1.0.0",
+  "description": "Modal windows for the Assemble CSS Framework.",
+  "main": "assemble-modals.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luke Larsen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukelarsen/assemble-modals"
+  },
+  "dependencies": {
+    "object-assign": "^4.0.1",
+    "postcss": "^5.0.0",
+    "postcss-assemble-modal-helper": "^1.0.0",
+    "vanilla-modal": "^1.2.3"
+  },
+  "devDependencies": {}
+}
