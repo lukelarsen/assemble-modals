@@ -35,6 +35,7 @@ gulp.task('css', function () {
 ```
 
 ## Options
+Options are set with variables. These variables are already set with their default values so they will just work out of the box. If you wish to change them just define the variable you want to change before you load the _assemble-modals.css file. You may wish you see [Assemble Core] for more examples and directions for setting up a Assemble project.
 
 ### Design Variables
 
