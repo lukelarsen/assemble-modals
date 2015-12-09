@@ -63,7 +63,7 @@ $btn-padding: 5px 10px;
 ```
 
 ##### Modal z-index
-This component makes use of the [postcss-constants] plugin to set the z-index. [postcss-constants] is included with [Assemble Core] so you are good to go. This helps keep all our z-index values in one place. Do get this working you will need to:
+This component makes use of the [postcss-constants] plugin to set the z-index. [postcss-constants] is included with [Assemble Core] so you are good to go. This helps keep all our z-index values in one place. To get this working you will need to:
 1- Create a 'constants.js' file and add this to it
 ```js
 module.exports = {
@@ -80,7 +80,7 @@ module.exports = {
 ~zindexes: "./constants.js";
 ```
 
-Now the assemble-modal plugin will pull the z-index values from the constants.js file. You can add more values there and call them in your css with
+Now the assemble-modal component will pull the z-index values from the constants.js file. You can add more values there and call them in your css with
 ```css
 z-index: ~zindexes.tip;
 ```
