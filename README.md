@@ -1,5 +1,6 @@
 [Assemble]:                http://assemblecss.com
 [Assemble Core]:           https://github.com/lukelarsen/assemble-core
+[postcss-constants]:       https://github.com/macropodhq/postcss-constants
 
 # Assemble Modals
 Assemble Modals is a component of the [Assemble] CSS Framework. It will give you a solid base for modals in your project. It has some default styles that can easily be overridden so you can add your own look.
@@ -60,6 +61,30 @@ $modal-inner-padding: 5px;
 ```css
 $btn-padding: 5px 10px;
 ```
+
+##### Modal z-index
+This component makes use of the [postcss-constants] plugin to set the z-index. [postcss-constants] is included with [Assemble Core] so you are good to go. This helps keep all our z-index values in one place. Do get this working you will need to:
+1- Create a 'constants.js' file and add this to it
+```js
+module.exports = {
+  zindexes: {
+    modal: 99,
+    modalInner: -1,
+    modalInnerVisible: 100,
+    modalClose: 2,
+  }
+};
+```
+2- Then in your main css file add this towards the top:
+```css
+~zindexes: "./constants.js";
+```
+
+Now the assemble-modal plugin will pull the z-index values from the constants.js file. You can add more values there and call them in your css with
+```css
+z-index: ~zindexes.tip;
+```
+
 
 ##### $modal-close-background-color
 - Default: #000;
