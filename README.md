@@ -21,12 +21,12 @@ npm install assemble-modals --save-dev
 ```js
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
-var assembleCore = require('assemble-core');
+var assembleBase = require('assemble-base');
 var assembleModals = require('assemble-modals');
 
 gulp.task('css', function () {
     var processors = [
-        assembleCore,
+        assembleBase,
         assembleModals
     ];
     return gulp.src('./src/*.css')
