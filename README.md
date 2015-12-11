@@ -34,7 +34,7 @@ gulp.task('css', function () {
         .pipe(gulp.dest('./dest'));
 });
 ```
-Then import the _assemble-forms.css file from your css file.
+Then import the _assemble-modals.css file from your css file.
 ```css
 @import '../node_modules/assemble-base/base';
 
