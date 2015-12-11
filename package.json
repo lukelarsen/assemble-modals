@@ -15,8 +15,7 @@
   "dependencies": {
     "object-assign": "^4.0.1",
     "postcss": "^5.0.0",
-    "postcss-assemble-modal-helper": "^1.0.0",
-    "vanilla-modal": "^1.2.3"
+    "postcss-assemble-modal-helper": "^1.0.0"
   },
   "devDependencies": {}
 }
