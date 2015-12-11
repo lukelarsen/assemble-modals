@@ -153,22 +153,22 @@ You can set all the widths you need for your modals in a .modal-widths class. Th
 ```
 Will output:
 ```css
-.modal__block-large {
+.modal-block__large {
   max-width: 500px;
 }
 
-.modal__block-medium {
+.modal-block__medium {
   max-width: 300px;
 }
 
-.modal__block-half {
+.modal-block__half {
   max-width: 50%;
 }
 ```
 Usage
 ```html
 <div id="modal-1" class="modal-block">
-    <div class="modal__block-large">
+    <div class="modal-block__large">
         <h4>Headline</h4>
         <ul class="form-thirds">
             <li>
