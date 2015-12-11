@@ -33,7 +33,7 @@
     white-space: nowrap;
     content: '';
     opacity: 0;
-    z-index: ~zindexes.modalInner;
+    z-index: map(constants, zIndexes, modalInner);
     overflow: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -58,7 +58,7 @@
 .vanilla-modal.modal-visible .modal {
     transition: opacity 0.3s;
     opacity: 1;
-    z-index: ~zindexes.modal;
+    z-index: map(constants, zIndexes, modal);
 }
 
 
@@ -79,7 +79,7 @@
     background: $modal-inner-background-color;
     opacity: 0;
     overflow: hidden;
-    z-index: ~zindexes.modalInner;
+    z-index: map(constants, zIndexes, modalInner);
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -88,7 +88,7 @@
     transform: scale(1);
     transition: opacity 0.3s, transform 0.3s;
     opacity: 1;
-    z-index: ~zindexes.modalInnerVisible;
+    z-index: map(constants, zIndexes, modalInnerVisible);
 }
 
 
@@ -111,5 +111,5 @@ a[rel="modal:close"] {
     font-size: 13px;
     line-height: 25px;
     text-align: center;
-    z-index: ~zindexes.modalClose;
+    z-index: map(constants, zIndexes, modalClose);
 }
