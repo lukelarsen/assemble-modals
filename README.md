@@ -10,7 +10,7 @@ Assemble Modals is a component of the [Assemble] CSS Framework. It will give you
 - The Vanilla Modal javascript file (vanilla-modal.js). It is inluded in this repo.
 - This will need to run after the page is loaded.
 ```js
-var modal = new VanillaModal({});
+var modal = new vanillaModal.VanillaModal({});
 ```
 
 ## Installation
