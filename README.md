@@ -50,7 +50,7 @@ This only need to appear once in your app. All modals will be injected inside of
 ```html
 <div class="modal">
     <div class="modal-inner">
-        <a rel="modal:close">×</a>
+        <a class="modal-close" rel="modal:close">×</a>
         <div class="modal-content"></div>
     </div>
 </div>
