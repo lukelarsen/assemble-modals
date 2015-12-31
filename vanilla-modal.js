@@ -411,4 +411,3 @@
     return VanillaModal;
   })();
 });
-//# sourceMappingURL=vanilla-modal.js.map
