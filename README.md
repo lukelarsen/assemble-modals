@@ -80,6 +80,15 @@ Options are set with variables. These variables are already set with their defau
 $modal-overlay-color: rgba(0, 0, 0, 0.6);
 ```
 
+##### $modal-header-padding
+- Set the header padding for your modals.
+- Default: 15px;
+- Type: Number
+- It will take any number witha unit type.
+```css
+$modal-header-padding: 5px;
+```
+
 ##### $modal-inner-padding
 - Set the inner padding for your modals.
 - Default:  15px;
@@ -87,6 +96,14 @@ $modal-overlay-color: rgba(0, 0, 0, 0.6);
 - It will take any number witha unit type.
 ```css
 $modal-inner-padding: 5px;
+```
+
+##### $modal-content-max-height
+- Set the max height of the content area. Keep the calc function in for better results.
+- Default: calc(100% - 265px);
+- Type: Number
+```css
+$modal-content-max-height: calc(100% - 200px);
 ```
 
 ##### $modal-inner-background-color

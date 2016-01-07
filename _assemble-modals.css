@@ -61,6 +61,28 @@
     z-index: map(constants, zIndexes, modal);
 }
 
+.modal-header{
+    padding: $modal-header-padding;
+}
+
+.modal-content{
+    display: flex;
+    max-height: 100%;
+    flex-direction: column;
+}
+
+.modal-contents{
+    flex: 1 0 auto;
+    width: 100%;
+    max-height: $modal-content-max-height;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.modal-footer{
+    flex: none;
+}
+
 
 
 
@@ -80,8 +102,6 @@
     opacity: 0;
     overflow: hidden;
     z-index: map(constants, zIndexes, modalInner);
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .modal-visible .modal-inner {
