@@ -65,11 +65,11 @@
     padding: $modal-header-padding;
 }
 
-.modal-content{
+/*.modal-content{
     display: flex;
     max-height: 100%;
     flex-direction: column;
-}
+}*/
 
 .modal-contents{
     flex: 1 0 auto;
