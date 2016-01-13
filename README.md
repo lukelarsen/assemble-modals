@@ -199,15 +199,15 @@ You can set all the widths you need for your modals in a .modal-widths class. Th
 Will output:
 ```css
 body[data-current-modal*="_large"] .modal-inner{
-    max-width: 500px;
+    width: 500px;
 }
 
 body[data-current-modal*="_medium"] .modal-inner{
-  max-width: 300px;
+    width: 300px;
 }
 
 body[data-current-modal*="_half"] .modal-inner{
-  max-width: 50%;
+    width: 50%;
 }
 ```
 Usage
