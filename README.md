@@ -58,8 +58,17 @@ This only need to appear once in your app. All modals will be injected inside of
 Contents of the modal
 ```html
 <div id="modal-1" class="modal-block">
-    <h3>Headline</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi facilis, natus sequi. Recusandae veritatis, perferendis itaque, praesentium quo aliquam doloribus vero ipsa alias hic assumenda, nisi animi voluptas non fugiat?</p>
+    <div class="modal-header">
+        <h2>Headline</h2>
+    </div>
+    <div class="modal-body">
+        <div class="modal-body__inner">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus obcaecati optio reprehenderit consequuntur, dignissimos sit sint animi explicabo vitae deserunt facere dolores nam. Illo iusto pariatur dolore, officiis unde saepe.</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn">Submit</button>
+    </div>
 </div>
 ```
 What triggers the modal
@@ -82,28 +91,47 @@ $modal-overlay-color: rgba(0, 0, 0, 0.6);
 
 ##### $modal-header-padding
 - Set the header padding for your modals.
-- Default: 15px;
+- Default: 0 30px;
 - Type: Number
-- It will take any number witha unit type.
+- It will take any number with a unit type.
 ```css
-$modal-header-padding: 5px;
+$modal-header-padding: 0 15px;
 ```
 
-##### $modal-inner-padding
-- Set the inner padding for your modals.
-- Default:  15px;
+##### $modal-body-padding
+- Set the body padding for your modals.
+- Default: 0 30px;
 - Type: Number
-- It will take any number witha unit type.
+- It will take any number with a unit type.
 ```css
-$modal-inner-padding: 5px;
+$modal-body-padding: 0 15px;
 ```
 
-##### $modal-content-max-height
-- Set the max height of the content area. Keep the calc function in for better results.
-- Default: calc(100% - 265px);
+##### $modal-footer-padding
+- Set the footer padding for your modals.
+- Default: 30px;
 - Type: Number
+- It will take any number with a unit type.
 ```css
-$modal-content-max-height: calc(100% - 200px);
+$modal-footer-padding: 15px;
+```
+
+##### $modal-body-height
+- Set the max height for the .modal-body__inner div.
+- Default: 400px;
+- Type: Number
+- It will take any number with a unit type. It is recommended that you use media queries to adjust this value when you need.
+```css
+$modal-body-height: 500px;
+```
+
+##### $modal-body-margin-bottom
+- Set margin-bottom for the .modal-body__inner div.
+- Default: 78px;
+- Type: Number
+- It will take any number with a unit type.
+```css
+$modal-body-margin-bottom: 85px;
 ```
 
 ##### $modal-inner-background-color
@@ -170,38 +198,47 @@ You can set all the widths you need for your modals in a .modal-widths class. Th
 ```
 Will output:
 ```css
-.modal-block__large {
-  max-width: 500px;
+body[data-current-modal*="_large"] .modal-inner{
+    max-width: 500px;
 }
 
-.modal-block__medium {
+body[data-current-modal*="_medium"] .modal-inner{
   max-width: 300px;
 }
 
-.modal-block__half {
+body[data-current-modal*="_half"] .modal-inner{
   max-width: 50%;
 }
 ```
 Usage
 ```html
-<div id="modal-1" class="modal-block">
-    <div class="modal-block__large">
-        <h4>Headline</h4>
-        <ul class="form-thirds">
-            <li>
-                <label>Input Field 1</label>
-                <input type="text">
-            </li>
-            <li>
-                <label>Input Field 2</label>
-                <input type="text">
-            </li>
-            <li>
-                <label>Input Field 3</label>
-                <input type="text">
-            </li>
-        </ul>
+<div id="modal-1_large" class="modal-block">
+    <div class="modal-header">
+        <h2>Headline</h2>
+    </div>
+    <div class="modal-body">
+        <div class="modal-body__inner">
+            <ul class="form-thirds">
+                <li>
+                    <label>Input Field 1</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label>Input Field 2</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label>Input Field 3</label>
+                    <input type="text">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal-footer">
         <button class="btn">Submit</button>
     </div>
 </div>
 ```
+
+##### Modal Heights
+To set the modal height you will need to change the max-height of the .modal-body__inner div.
