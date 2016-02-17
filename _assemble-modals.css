@@ -194,3 +194,7 @@ body[data-current-modal*="_grid"] .modal-inner {
 body[data-current-modal*="_no-footer"] .modal-body__inner {
     margin-bottom: 0;
 }
+
+body[data-current-modal*="_no-footer"] .modal-footer{
+    display: none;
+}
